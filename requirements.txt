@@ -1,0 +1,7 @@
+feedparser
+requests
+beautifulsoup4
+boto3
+python-dotenv
+flask
+pillow
