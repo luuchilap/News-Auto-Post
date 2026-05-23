@@ -64,7 +64,10 @@ def upload_images(articles: list[dict]) -> list[dict]:
         aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
     )
 
-    bucket      = os.getenv("S3_BUCKET_NAME")
+    bucket = (os.getenv("S3_BUCKET_NAME") or "").strip()
+    if not bucket:
+        print("[!] Thiếu S3_BUCKET_NAME — kiểm tra GitHub Secrets")
+        return articles
     cf_base_url = os.getenv("CLOUDFRONT_BASE_URL", "").rstrip("/")
     if cf_base_url and not cf_base_url.startswith("https://"):
         cf_base_url = "https://" + cf_base_url
