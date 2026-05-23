@@ -48,7 +48,7 @@ def _build_caption(articles: list[dict]) -> tuple[str, str]:
     from datetime import datetime
 
     date_str = datetime.now().strftime("%d/%m")
-    title = _truncate_utf16(f"Điểm tin sáng {date_str}", 90)
+    title = _truncate_utf16(f"Điểm tin ngày {date_str}", 90)
 
     lines = [f"{i}. {a['title']}" for i, a in enumerate(articles, 1)]
     hashtags = "#TinTuc #VNExpress #DiemTinSang #ThoiSu"

@@ -9,10 +9,12 @@ from datetime import datetime, timezone, timedelta
 import time
 
 RSS_FEEDS = {
-    "tin-moi-nhat": "https://vnexpress.net/rss/tin-moi-nhat.rss",
-    "the-thao":     "https://vnexpress.net/rss/the-thao.rss",
-    "kinh-doanh":   "https://vnexpress.net/rss/kinh-doanh.rss",
+    "thoi-su":      "https://vnexpress.net/rss/thoi-su.rss",
+    "the-gioi":     "https://vnexpress.net/rss/the-gioi.rss",
+    "khoa-hoc":     "https://vnexpress.net/rss/khoa-hoc.rss",
     "giai-tri":     "https://vnexpress.net/rss/giai-tri.rss",
+    "the-thao":     "https://vnexpress.net/rss/the-thao.rss",
+    "bat-dong-san": "https://vnexpress.net/rss/bat-dong-san.rss",
 }
 
 HEADERS = {
